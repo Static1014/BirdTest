@@ -52,7 +52,7 @@
 		50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629517ECD46A001EB2F8 /* Icon-100.png */; };
 		50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
-		7DA5A4B319C06DF000F73971 /* AtlasLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5A4B119C06DF000F73971 /* AtlasLoader.cpp */; };
+		7DA5A4D219C0993A00F73971 /* AtlasLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5A4CF19C0993A00F73971 /* AtlasLoader.cpp */; };
 		B3821C7D19C0004800A9BEE0 /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3821C7919BFFC8300A9BEE0 /* libbox2d iOS.a */; };
 		B3821C7E19C0004800A9BEE0 /* libchipmunk iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3821C7719BFFC8300A9BEE0 /* libchipmunk iOS.a */; };
 		B3821C7F19C0004800A9BEE0 /* libcocos2dx iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3821C7319BFFC8300A9BEE0 /* libcocos2dx iOS.a */; };
@@ -201,9 +201,9 @@
 		50EF629517ECD46A001EB2F8 /* Icon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-100.png"; sourceTree = "<group>"; };
 		50EF62A017ECD613001EB2F8 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
-		7DA5A4B019C06D4400F73971 /* Constance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constance.h; sourceTree = "<group>"; };
-		7DA5A4B119C06DF000F73971 /* AtlasLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AtlasLoader.cpp; sourceTree = "<group>"; };
-		7DA5A4B219C06DF000F73971 /* AtlasLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtlasLoader.h; sourceTree = "<group>"; };
+		7DA5A4CF19C0993A00F73971 /* AtlasLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AtlasLoader.cpp; path = ../Classes/AtlasLoader.cpp; sourceTree = "<group>"; };
+		7DA5A4D019C0993A00F73971 /* AtlasLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtlasLoader.h; path = ../Classes/AtlasLoader.h; sourceTree = "<group>"; };
+		7DA5A4D119C0993A00F73971 /* Constance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constance.h; path = ../Classes/Constance.h; sourceTree = "<group>"; };
 		B3821C5519BFFAD900A9BEE0 /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		B3821C8519C01A1A00A9BEE0 /* 1257355888.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1257355888.png; sourceTree = "<group>"; };
 		B3821C8619C01A1A00A9BEE0 /* atlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = atlas.png; sourceTree = "<group>"; };
@@ -295,9 +295,9 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7DA5A4B119C06DF000F73971 /* AtlasLoader.cpp */,
-				7DA5A4B219C06DF000F73971 /* AtlasLoader.h */,
-				7DA5A4B019C06D4400F73971 /* Constance.h */,
+				7DA5A4CF19C0993A00F73971 /* AtlasLoader.cpp */,
+				7DA5A4D019C0993A00F73971 /* AtlasLoader.h */,
+				7DA5A4D119C0993A00F73971 /* Constance.h */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				1AFAF8B516D35DE700DB1158 /* LoadingScene.cpp */,
@@ -674,7 +674,7 @@
 				B3821CA519C0218200A9BEE0 /* HomeScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				B3821CAE19C0415300A9BEE0 /* BirdSprite.cpp in Sources */,
-				7DA5A4B319C06DF000F73971 /* AtlasLoader.cpp in Sources */,
+				7DA5A4D219C0993A00F73971 /* AtlasLoader.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* LoadingScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
