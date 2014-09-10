@@ -39,8 +39,8 @@ bool HomeScene::init() {
     auto bird = BirdSprite::getInstance();
     bird->createBird();
     bird->setPosition(Vec2(WIN_SIZE.width/2, WIN_SIZE.height/2));
+    bird->idle();
     this->addChild(bird);
-//    bird->idle();
 
     auto startSprite1 = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName("button_play"));
     auto startSprite2 = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName("button_play"));

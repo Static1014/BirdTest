@@ -21,17 +21,18 @@ class BirdSprite : public Sprite {
 public:
     BirdSprite();
     ~BirdSprite();
-
-    virtual bool init();
+    
     static BirdSprite* getInstance();
-
+    virtual bool init();
     bool createBird();
-
-public:
+    
     void idle();
     void fly();
     void die();
 
+protected: 
+    Animation* createAnimation(const char* format, int count, float fps);
+    
 private:
     static BirdSprite* sharedBird;
     ActionState currentState;
@@ -39,7 +40,6 @@ private:
     Action* swingAction;
     Action* idleAction;
 
-    Animation* createAnimation(const char* format, int count, float fps);
 };
 
 #endif /* defined(__BirdTest__BirdSprite__) */

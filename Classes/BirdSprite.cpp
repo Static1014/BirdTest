@@ -20,8 +20,6 @@ BirdSprite* BirdSprite::getInstance() {
             delete(sharedBird);
             sharedBird = NULL;
             CCLOG("Create Bird ERROR!!!");
-        } else {
-//            sharedBird->createBird();
         }
     }
     return sharedBird;
@@ -51,13 +49,14 @@ bool BirdSprite::createBird() {
             nameFormat = "bird2_%d";
             break;
     }
-    if (!Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(name))) {
+    
+    if (!Sprite::initWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(name))) {
         return false;
     } else {
         Animate* animate = Animate::create(createAnimation(nameFormat.c_str(), 3, 10));
         idleAction = RepeatForever::create(animate);
 
-        ActionInterval* up = MoveBy::create(0.4f,Point(0, 8));
+        ActionInterval* up = MoveBy::create(0.4f,Vec2(0, 8));
         ActionInterval* down = up->reverse();
         swingAction = RepeatForever::create(Sequence::create(up, down, NULL));
 
@@ -93,6 +92,5 @@ Animation* BirdSprite::createAnimation(const char* format, int count, float fps)
         SpriteFrame* frame = AtlasLoader::getInstance()->getSpriteFrameByName(String::createWithFormat(format, i)->getCString());
         animation->addSpriteFrame(frame);
     }
-
     return animation;
 }
