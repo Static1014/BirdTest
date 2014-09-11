@@ -17,6 +17,9 @@ typedef enum {
     ACTION_STATE_DIE
 } ActionState;
 
+const int Tag_shared_bird = 10001;
+const int BIRD_RADIUS = 15;
+
 class BirdSprite : public Sprite {
 public:
     BirdSprite();

@@ -9,6 +9,7 @@
 #include "HomeScene.h"
 #include "BackgroundLayer.h"
 #include "BirdSprite.h"
+#include "GameScene.h"
 
 enum {
     TagStartBtn,
@@ -38,6 +39,7 @@ bool HomeScene::init() {
 
     auto bird = BirdSprite::getInstance();
     bird->createBird();
+    bird->setTag(Tag_shared_bird);
     bird->setPosition(Vec2(WIN_SIZE.width/2, WIN_SIZE.height/2));
     bird->idle();
     this->addChild(bird);
@@ -61,6 +63,9 @@ bool HomeScene::init() {
 void HomeScene::menuCallBack(Ref* pSender) {
     Node* btn = (Node*)pSender;
     if (btn->getTag() == TagStartBtn) {
-        CCLOG("1111111111");
+        this->removeChildByTag(Tag_shared_bird);
+        auto gameScene = GameScene::create();
+        auto gameSceneTrans = TransitionFadeTR::create(0.6, gameScene);
+        Director::getInstance()->replaceScene(gameSceneTrans);
     }
 }

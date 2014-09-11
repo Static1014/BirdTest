@@ -74,7 +74,7 @@ void BirdSprite::idle() {
 void BirdSprite::fly() {
     currentState = ACTION_STATE_FLY;
 
-    this->runAction(idleAction);
+//    this->runAction(idleAction);
     this->getPhysicsBody()->setGravityEnable(true);
 }
 

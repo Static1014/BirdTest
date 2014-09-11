@@ -74,6 +74,8 @@
 		B3821CA519C0218200A9BEE0 /* HomeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3821CA319C0218200A9BEE0 /* HomeScene.cpp */; };
 		B3821CA819C0274000A9BEE0 /* BackgroundLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3821CA619C0274000A9BEE0 /* BackgroundLayer.cpp */; };
 		B3821CAE19C0415300A9BEE0 /* BirdSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3821CAC19C0415300A9BEE0 /* BirdSprite.cpp */; };
+		B39A88AD19C154570038F412 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B39A88AB19C154570038F412 /* GameScene.cpp */; };
+		B39A88BD19C175C70038F412 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B39A88BB19C175C70038F412 /* GameLayer.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -224,6 +226,10 @@
 		B3821CA719C0274000A9BEE0 /* BackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackgroundLayer.h; path = ../Classes/BackgroundLayer.h; sourceTree = "<group>"; };
 		B3821CAC19C0415300A9BEE0 /* BirdSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BirdSprite.cpp; path = ../Classes/BirdSprite.cpp; sourceTree = "<group>"; };
 		B3821CAD19C0415300A9BEE0 /* BirdSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BirdSprite.h; path = ../Classes/BirdSprite.h; sourceTree = "<group>"; };
+		B39A88AB19C154570038F412 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = ../Classes/GameScene.cpp; sourceTree = "<group>"; };
+		B39A88AC19C154570038F412 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = ../Classes/GameScene.h; sourceTree = "<group>"; };
+		B39A88BB19C175C70038F412 /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameLayer.cpp; path = ../Classes/GameLayer.cpp; sourceTree = "<group>"; };
+		B39A88BC19C175C70038F412 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = ../Classes/GameLayer.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -308,6 +314,10 @@
 				B3821CA719C0274000A9BEE0 /* BackgroundLayer.h */,
 				B3821CAC19C0415300A9BEE0 /* BirdSprite.cpp */,
 				B3821CAD19C0415300A9BEE0 /* BirdSprite.h */,
+				B39A88AB19C154570038F412 /* GameScene.cpp */,
+				B39A88AC19C154570038F412 /* GameScene.h */,
+				B39A88BB19C175C70038F412 /* GameLayer.cpp */,
+				B39A88BC19C175C70038F412 /* GameLayer.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -667,11 +677,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B39A88AD19C154570038F412 /* GameScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				B3821CA819C0274000A9BEE0 /* BackgroundLayer.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				B3821CA519C0218200A9BEE0 /* HomeScene.cpp in Sources */,
+				B39A88BD19C175C70038F412 /* GameLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				B3821CAE19C0415300A9BEE0 /* BirdSprite.cpp in Sources */,
 				7DA5A4D219C0993A00F73971 /* AtlasLoader.cpp in Sources */,
