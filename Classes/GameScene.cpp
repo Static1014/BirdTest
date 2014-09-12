@@ -15,6 +15,7 @@ GameScene::~GameScene(){}
 bool GameScene::init() {
     if (!Scene::initWithPhysics()) { return false; }
     this->getPhysicsWorld()->setGravity(Vec2(0, -900));
+//    this->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
 
     auto gameLayer = GameLayer::create();
     this->addChild(gameLayer);

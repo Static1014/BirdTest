@@ -46,10 +46,13 @@ public:
 
 private:
     PhysicsWorld* world;
-    Node* groundNode;
     BackgroundLayer* bgLayer;
     BirdSprite* bird;
     Vector<Node*> pipes;
+    Label* scoreLabel;
+    Sprite* land1;
+    Sprite* land2;
+    Node* readyNode;
 
     int score;
     GameStatus gameStatus;
