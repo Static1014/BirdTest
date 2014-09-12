@@ -24,4 +24,7 @@ using namespace std;
 #define VISIBLE_ORIGIN Director::getInstance()->getVisibleOrigin()
 #define WIN_SIZE Director::getInstance()->getWinSize()
 
+#define min(X, Y) ((X)<(Y) ? (X) : (Y))
+#define max(X, Y) ((X)>(Y) ? (X) : (Y))
+
 #endif
