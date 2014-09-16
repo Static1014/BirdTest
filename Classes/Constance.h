@@ -23,6 +23,7 @@ using namespace std;
 #define VISIBLE_SIZE Director::getInstance()->getVisibleSize()
 #define VISIBLE_ORIGIN Director::getInstance()->getVisibleOrigin()
 #define WIN_SIZE Director::getInstance()->getWinSize()
+#define WIN_CENTER Vec2(WIN_SIZE.width/2, WIN_SIZE.height/2)
 
 #define min(X, Y) ((X)<(Y) ? (X) : (Y))
 #define max(X, Y) ((X)>(Y) ? (X) : (Y))

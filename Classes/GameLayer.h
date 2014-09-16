@@ -12,6 +12,8 @@
 #include "Constance.h"
 #include "BirdSprite.h"
 #include "BackgroundLayer.h"
+#include "PopLayer.h"
+#include "HomeScene.h"
 
 const int TAG_UP_PIPE = 2001;
 const int TAG_DOWN_PIPE = 2002;
@@ -43,7 +45,11 @@ public:
     void setPhyWorld(PhysicsWorld* pWorld) { world = pWorld; };
 
     bool onTouchBegan(Touch* touch, Event* pEvent);
+    void menuCallBack(Node* pSender);
 
+    //  Delegate
+    void backToHome();
+    void clickRestart();
 private:
     PhysicsWorld* world;
     BackgroundLayer* bgLayer;
@@ -62,6 +68,8 @@ private:
     bool onContactBegin(PhysicsContact& contact);
     void gameOver();
     void movePipes(float dt);
+
+    void initLayer();
 };
 
 #endif /* defined(__BirdTest__GameLayer__) */

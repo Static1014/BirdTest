@@ -12,16 +12,16 @@ GameLayer::GameLayer(){}
 GameLayer::~GameLayer(){}
 
 bool GameLayer::init() {
-    if (!Layer::init()) return false;
+    if (!Layer::init()){
+       return false;
+    }
 
     gameStatus = GAME_STATUS_READY;
     score = 0;
 
     bgLayer = BackgroundLayer::create();
     this->addChild(bgLayer, 0);
-    bgLayer->setScrollLand(false);
-//    bgLayer->setScale(0);
-//    bgLayer->runAction(ScaleTo::create(2.0f, 1));
+//    bgLayer->setScrollLand(false);
 
     auto groundNode = Node::create();
     auto groundBody = PhysicsBody::create();
@@ -101,7 +101,7 @@ bool GameLayer::init() {
     this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(contactListener, this);
 
     auto touchListener = EventListenerTouchOneByOne::create();
-    touchListener->setSwallowTouches(true);
+    touchListener->setSwallowTouches(false);
     touchListener->onTouchBegan = CC_CALLBACK_2(GameLayer::onTouchBegan, this);
     this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
 
@@ -207,9 +207,33 @@ void GameLayer::gameOver() {
     bgLayer->setScrollLand(false);
     this->unscheduleAllSelectors();
     bird->die();
+
+    this->getEventDispatcher()->removeAllEventListeners();
+
+    auto overPop = PopLayer::create();
+    overPop->setBackground("score_panel");
+    overPop->setCallBackFunc(this, callfuncN_selector(GameLayer::menuCallBack));
+    overPop->addButton("button_menu", "button_ok", "", 1001);
+    overPop->addButton("button_ok", "button_menu", "", 1002);
+    this->addChild(overPop, 4);
+}
+
+void GameLayer::menuCallBack(Node* pSender) {
+    CCLOG("***-----%d", pSender->getTag());
+//    if (pSender->getTag() == 1001) {
+//        backToHome();
+//    } else {
+        restart();
+//    }
 }
 
 void GameLayer::restart() {
-    this->removeAllChildrenWithCleanup(true);
+    this->removeAllChildren();
     init();
+}
+
+void GameLayer::backToHome() {
+    auto home = HomeScene::createScene();
+    auto homeTrans = TransitionFadeBL::create(0.7, home);
+    Director::getInstance()->replaceScene(homeTrans);
 }
