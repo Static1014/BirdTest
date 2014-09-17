@@ -271,7 +271,7 @@ void GameLayer::showOverPop() {
     overPop->setBackground("score_panel");
     overPop->setCallBackFunc(this, callfuncN_selector(GameLayer::menuCallBack));
     overPop->addButton("button_menu", "", "", 1001);
-    overPop->addButton("button_ok", "button_menu", "", 1002);
+    overPop->addButton("button_ok", "", "", 1002);
 
     overPop->addCustomNode(sortSprite, Vec2(55, 60));
     overPop->addCustomNode(currentScoreLabel, Vec2(210, 80));
