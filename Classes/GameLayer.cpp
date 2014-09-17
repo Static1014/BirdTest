@@ -19,10 +19,6 @@ bool GameLayer::init() {
     gameStatus = GAME_STATUS_READY;
     score = 0;
 
-    bgLayer = BackgroundLayer::create();
-    this->addChild(bgLayer, 0);
-//    bgLayer->setScrollLand(false);
-
     auto groundNode = Node::create();
     auto groundBody = PhysicsBody::create();
     groundBody->addShape(PhysicsShapeBox::create(Size(288, BackgroundLayer::getLandHeight())));
@@ -79,12 +75,21 @@ bool GameLayer::init() {
     scoreLabel->setPosition(Vec2(10, WIN_SIZE.height-5));
     this->addChild(scoreLabel, 3);
 
-    auto restartItem = MenuItemFont::create("restart", CC_CALLBACK_0(GameLayer::restart, this));
-    restartItem->setAnchorPoint(Vec2::ANCHOR_TOP_RIGHT);
-    restartItem->setFontSizeObj(24);
-    auto menu = Menu::create(restartItem, NULL);
-    menu->setPosition(Vec2(WIN_SIZE.width-10, WIN_SIZE.height-5));
+//    auto restartItem = MenuItemFont::create("restart", CC_CALLBACK_0(GameLayer::restart, this));
+//    restartItem->setAnchorPoint(Vec2::ANCHOR_TOP_RIGHT);
+//    restartItem->setFontSizeObj(24);
+
+    auto pauseNormalSprite = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName("button_pause"));
+    auto pauseSelectedSprite = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName("button_pause"));
+    pauseSelectedSprite->setScale(0.8);
+    pauseItem = MenuItemSprite::create(pauseNormalSprite, pauseSelectedSprite, CC_CALLBACK_0(GameLayer::pauseOrResumeGame, this));
+    pauseItem->setTag(211);
+    pauseItem->setPosition(Vec2(WIN_SIZE.width-25, WIN_SIZE.height-25));
+    auto menu = Menu::create(pauseItem, NULL);
+    menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 3);
+    pauseItem->setEnabled(false);
+
 
     land1 = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName("land"));
     land1->setAnchorPoint(Vec2::ZERO);
@@ -96,11 +101,11 @@ bool GameLayer::init() {
     land2->setPosition(Vec2(land1->getContentSize().width-2.0f, 0));
     this->addChild(land2, 3);
 
-    auto contactListener = EventListenerPhysicsContact::create();
+    contactListener = EventListenerPhysicsContact::create();
     contactListener->onContactBegin = CC_CALLBACK_1(GameLayer::onContactBegin, this);
     this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(contactListener, this);
 
-    auto touchListener = EventListenerTouchOneByOne::create();
+    touchListener = EventListenerTouchOneByOne::create();
     touchListener->setSwallowTouches(false);
     touchListener->onTouchBegan = CC_CALLBACK_2(GameLayer::onTouchBegan, this);
     this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
@@ -113,9 +118,41 @@ bool GameLayer::onContactBegin(PhysicsContact& contact) {
     return true;
 }
 
+void GameLayer::pauseOrResumeGame() {
+    string btnImage;
+    if (gameStatus != GAME_STATUS_PAUSE) {
+        gameStatus = GAME_STATUS_PAUSE;
+        btnImage = "button_resume";
+
+        this->getEventDispatcher()->removeEventListener(contactListener);
+//        this->getEventDispatcher()->removeEventListener(touchListener);
+        this->unschedule(moveSchedule);
+
+        speed = bird->getPhysicsBody()->getVelocity();
+        bird->getPhysicsBody()->setVelocity(Vec2(0, 0));
+        bird->getPhysicsBody()->setEnable(false);
+        bird->stopAllActions();
+    } else {
+        gameStatus = GAME_STATUS_START;
+        btnImage = "button_pause";
+
+        this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(contactListener, this);
+        //    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
+        this->schedule(moveSchedule, 0.01f);
+        bird->resume();
+        bird->getPhysicsBody()->setEnable(true);
+        bird->getPhysicsBody()->setVelocity(speed);
+    }
+    
+    auto pauseNormalSprite = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(btnImage));
+    auto pauseSelectedSprite = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(btnImage));
+    pauseSelectedSprite->setScale(0.8);
+    pauseItem->setNormalImage(pauseNormalSprite);
+    pauseItem->setSelectedImage(pauseSelectedSprite);
+}
 
 bool GameLayer::onTouchBegan(Touch* touch, Event* pEvent) {
-    if (gameStatus == GAME_STATUS_OVER) {
+    if (gameStatus == GAME_STATUS_OVER || gameStatus == GAME_STATUS_PAUSE) {
         return false;
     }
 
@@ -125,7 +162,11 @@ bool GameLayer::onTouchBegan(Touch* touch, Event* pEvent) {
         this->addChild(bird, 2);
         bird->fly();
         createPipes();
-        this->schedule(schedule_selector(GameLayer::movePipes), 0.01f);
+
+        moveSchedule = schedule_selector(GameLayer::movePipesAndLand);
+        this->schedule(moveSchedule, 0.01f);
+
+        pauseItem->setEnabled(true);
     } else {
         bird->getPhysicsBody()->setVelocity(Vect(0,260));
     }
@@ -162,7 +203,7 @@ void GameLayer::createPipes() {
     }
 }
 
-void GameLayer::movePipes(float dt) {
+void GameLayer::movePipesAndLand(float dt) {
     float speed = bird->getPhysicsBody()->getVelocity().y;
     bird->setRotation(min(max(-60, (speed*0.2 + 60)), 30));
 
@@ -204,32 +245,97 @@ void GameLayer::movePipes(float dt) {
 
 void GameLayer::gameOver() {
     gameStatus = GAME_STATUS_OVER;
-    bgLayer->setScrollLand(false);
     this->unscheduleAllSelectors();
     bird->die();
+    pauseItem->setEnabled(false);
 
     this->getEventDispatcher()->removeAllEventListeners();
+
+    showOverPop();
+}
+
+void GameLayer::showOverPop() {
+    string str = String::createWithFormat("medals_%d",3-sortScore(score))->getCString();
+    auto sortSprite = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(str));
+
+    auto currentScoreLabel = Label::createWithSystemFont(String::createWithFormat("%d", score)->getCString(), "fonts/Marker Felt.ttf", 20);
+    currentScoreLabel->setColor(Color3B::RED);
+    currentScoreLabel->setAnchorPoint(Vec2::ANCHOR_MIDDLE_RIGHT);
+
+    string bestScoreStr = String::createWithFormat("%d", UserDefault::getInstance()->getIntegerForKey(KEY_FIRST_SCORE))->getCString();
+    auto bestScoreLabel = Label::createWithSystemFont(bestScoreStr, "fonts/Marker Felt.ttf", 20);
+    bestScoreLabel->setColor(Color3B::RED);
+    bestScoreLabel->setAnchorPoint(Vec2::ANCHOR_MIDDLE_RIGHT);
 
     auto overPop = PopLayer::create();
     overPop->setBackground("score_panel");
     overPop->setCallBackFunc(this, callfuncN_selector(GameLayer::menuCallBack));
-    overPop->addButton("button_menu", "button_ok", "", 1001);
+    overPop->addButton("button_menu", "", "", 1001);
     overPop->addButton("button_ok", "button_menu", "", 1002);
+
+    overPop->addCustomNode(sortSprite, Vec2(55, 60));
+    overPop->addCustomNode(currentScoreLabel, Vec2(210, 80));
+    overPop->addCustomNode(bestScoreLabel, Vec2(210, 40));
+
     this->addChild(overPop, 4);
 }
 
+int GameLayer::sortScore(int cur) {
+    int first = UserDefault::getInstance()->getIntegerForKey(KEY_FIRST_SCORE);
+    int second = UserDefault::getInstance()->getIntegerForKey(KEY_SECOND_SCORE);
+    int third = UserDefault::getInstance()->getIntegerForKey(KEY_THIRD_SCORE);
+
+    CCLOG("%d----%d----%d---%d", first, second, third, cur);
+
+    if (cur == first) {
+        return 0;
+    } else if (cur == second) {
+        return 1;
+    } else if (cur == third) {
+        return 2;
+    } else if (cur > first) {
+        third = second;
+        second = first;
+        first = cur;
+
+        UserDefault::getInstance()->setIntegerForKey(KEY_FIRST_SCORE, first);
+        UserDefault::getInstance()->setIntegerForKey(KEY_SECOND_SCORE, second);
+        UserDefault::getInstance()->setIntegerForKey(KEY_THIRD_SCORE, third);
+        UserDefault::getInstance()->flush();
+        return 0;
+    } else if (cur > second) {
+        third = second;
+        second = cur;
+
+        UserDefault::getInstance()->setIntegerForKey(KEY_SECOND_SCORE, second);
+        UserDefault::getInstance()->setIntegerForKey(KEY_THIRD_SCORE, third);
+        UserDefault::getInstance()->flush();
+        return 1;
+    } else if (cur > third) {
+        third = cur;
+
+        UserDefault::getInstance()->setIntegerForKey(KEY_THIRD_SCORE, third);
+        UserDefault::getInstance()->flush();
+        return 2;
+    } else {
+        return 3;
+    }
+}
+
 void GameLayer::menuCallBack(Node* pSender) {
-    CCLOG("***-----%d", pSender->getTag());
-//    if (pSender->getTag() == 1001) {
-//        backToHome();
-//    } else {
+    this->removeAllChildrenWithCleanup(true);
+
+    if (pSender->getTag() == 1001) {
+        backToHome();
+    } else {
         restart();
-//    }
+    }
 }
 
 void GameLayer::restart() {
-    this->removeAllChildren();
-    init();
+    auto game = GameScene::create();
+    auto gameTrans = TransitionFlipAngular::create(0.6, game);
+    Director::getInstance()->replaceScene(gameTrans);
 }
 
 void GameLayer::backToHome() {

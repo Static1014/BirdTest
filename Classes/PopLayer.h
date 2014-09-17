@@ -25,6 +25,8 @@ public:
 
     void setTitle(string title = "");
 
+    void addCustomNode(Node* node, Vec2 location);
+
     void setCallBackFunc(Ref* target, SEL_CallFuncN callFunc);
 
     void addButton(string normalImage, string selectImage, string title = "", int tag = 0);

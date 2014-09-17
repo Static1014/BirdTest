@@ -17,6 +17,12 @@ typedef enum {
     ACTION_STATE_DIE
 } ActionState;
 
+typedef enum {
+    BIRD_YELLOW = 0,
+    BIRD_BLUE,
+    BIRD_RED
+} BirdType;
+
 const int Tag_shared_bird = 10001;
 const int BIRD_RADIUS = 15;
 
@@ -32,12 +38,14 @@ public:
     void idle();
     void fly();
     void die();
+    void resume();
 
 protected: 
-    Animation* createAnimation(const char* format, int count, float fps);
+    Animation* createAnimation(int count, float fps);
     
 private:
     static BirdSprite* sharedBird;
+    BirdType birdType;
     ActionState currentState;
 
     Action* swingAction;

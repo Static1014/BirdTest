@@ -43,6 +43,11 @@ void PopLayer::setTitle(string title) {
 
 }
 
+void PopLayer::addCustomNode(Node* node, Vec2 location) {
+    mBackground->addChild(node);
+    node->setPosition(location);
+}
+
 void PopLayer::setCallBackFunc(Ref* target, SEL_CallFuncN callFunc) {
     mCallBackListener = target;
     mCallFuncN = callFunc;
@@ -50,7 +55,10 @@ void PopLayer::setCallBackFunc(Ref* target, SEL_CallFuncN callFunc) {
 
 void PopLayer::addButton(string normalImage, string selectImage, string title, int tag) {
     auto normalSprite = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(normalImage));
-    auto selectedSprite = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(selectImage));
+
+    auto selectedSprite = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(("" == selectImage)?normalImage:selectImage));
+    selectedSprite->setScale(("" == selectImage)?0.9:1.0);
+
     auto item = MenuItemSprite::create(normalSprite, selectedSprite, CC_CALLBACK_1(PopLayer::menuCallback, this));
     item->setTag(tag);
 
@@ -70,9 +78,8 @@ void PopLayer::onEnter() {
         btn->setPosition(Vec2(btnWidth/2 + i*btnWidth + (i+1)*(bgWidth-btnWidth*btnCount)/(btnCount+1), 10));
     }
 
-    Action* action = Sequence::create(ScaleTo::create(0.0, 0.0),
-                                      ScaleTo::create(0.5, 1.06),
-                                      ScaleTo::create(0.25, 0.96),
-                                      ScaleTo::create(0.25, 1.00), NULL);
+    Action* action = Sequence::create(ScaleTo::create(0.20, 1.06),
+                                      ScaleTo::create(0.08, 0.96),
+                                      ScaleTo::create(0.08, 1.00), NULL);
     mBackground->runAction(action);
 }

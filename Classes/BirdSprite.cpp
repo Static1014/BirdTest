@@ -30,30 +30,33 @@ bool BirdSprite::init() {
 }
 
 bool BirdSprite::createBird() {
-    string name, nameFormat;
+    string name;
     switch((int)rand()%3) {
         case 0:
             name = "bird0_0";
-            nameFormat = "bird0_%d";
+            birdType = BIRD_RED;
             break;
         case 1:
             name = "bird1_0";
-            nameFormat = "bird1_%d";
+            birdType = BIRD_BLUE;
             break;
         case 2:
             name = "bird2_0";
-            nameFormat = "bird2_%d";
+            birdType = BIRD_YELLOW;
             break;
         default:
             name = "bird2_0";
-            nameFormat = "bird2_%d";
+            birdType = BIRD_YELLOW;
             break;
     }
     
     if (!Sprite::initWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(name))) {
         return false;
     } else {
-        Animate* animate = Animate::create(createAnimation(nameFormat.c_str(), 3, 10));
+        //  When Resume the sharedBird,Reset the Bird Rotation
+        this->setRotation(0);
+
+        Animate* animate = Animate::create(createAnimation(3, 10));
         idleAction = RepeatForever::create(animate);
 
         ActionInterval* up = MoveBy::create(0.4f,Vec2(0, 8));
@@ -74,8 +77,15 @@ void BirdSprite::idle() {
 void BirdSprite::fly() {
     currentState = ACTION_STATE_FLY;
 
-//    this->runAction(idleAction);
     this->getPhysicsBody()->setGravityEnable(true);
+}
+
+void BirdSprite::resume() {
+    currentState = ACTION_STATE_FLY;
+
+    Animate* animate = Animate::create(createAnimation(3, 10));
+    idleAction = RepeatForever::create(animate);
+    this->runAction(idleAction);
 }
 
 void BirdSprite::die() {
@@ -84,12 +94,12 @@ void BirdSprite::die() {
     this->stopAllActions();
 }
 
-Animation* BirdSprite::createAnimation(const char* format, int count, float fps) {
+Animation* BirdSprite::createAnimation(int count, float fps) {
     Animation* animation = Animation::create();
     animation->setDelayPerUnit(1/fps);
 
     for (int i = 0; i < count; i++) {
-        SpriteFrame* frame = AtlasLoader::getInstance()->getSpriteFrameByName(String::createWithFormat(format, i)->getCString());
+        SpriteFrame* frame = AtlasLoader::getInstance()->getSpriteFrameByName(String::createWithFormat("bird%d_%d", birdType, i)->getCString());
         animation->addSpriteFrame(frame);
     }
     return animation;

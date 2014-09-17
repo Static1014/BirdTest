@@ -10,6 +10,7 @@
 #define __BirdTest__GameLayer__
 
 #include "Constance.h"
+#include "GameScene.h"
 #include "BirdSprite.h"
 #include "BackgroundLayer.h"
 #include "PopLayer.h"
@@ -29,8 +30,13 @@ const int WAIT_DISTANCE = 100;
 typedef enum {
     GAME_STATUS_READY,
     GAME_STATUS_START,
-    GAME_STATUS_OVER
+    GAME_STATUS_OVER,
+    GAME_STATUS_PAUSE
 } GameStatus;
+
+#define KEY_FIRST_SCORE "first_score"
+#define KEY_SECOND_SCORE "second_score"
+#define KEY_THIRD_SCORE "third_score"
 
 class GameLayer : public Layer {
 public:
@@ -41,18 +47,17 @@ public:
 
     CREATE_FUNC(GameLayer);
     void restart();
+    void backToHome();
 
     void setPhyWorld(PhysicsWorld* pWorld) { world = pWorld; };
 
     bool onTouchBegan(Touch* touch, Event* pEvent);
     void menuCallBack(Node* pSender);
 
-    //  Delegate
-    void backToHome();
-    void clickRestart();
+    void pauseOrResumeGame();
+
 private:
     PhysicsWorld* world;
-    BackgroundLayer* bgLayer;
     BirdSprite* bird;
     Vector<Node*> pipes;
     Label* scoreLabel;
@@ -63,13 +68,19 @@ private:
     int score;
     GameStatus gameStatus;
 
-    void createPipes();
+    MenuItemSprite* pauseItem;
+    EventListenerPhysicsContact* contactListener;
+    EventListenerTouchOneByOne* touchListener;
+    SEL_SCHEDULE moveSchedule;
+    Vec2 speed;
 
+    void createPipes();
+    void movePipesAndLand(float dt);
     bool onContactBegin(PhysicsContact& contact);
     void gameOver();
-    void movePipes(float dt);
+    void showOverPop();
 
-    void initLayer();
+    int sortScore(int score);
 };
 
 #endif /* defined(__BirdTest__GameLayer__) */
