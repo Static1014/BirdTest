@@ -114,6 +114,7 @@ bool GameLayer::init() {
 }
 
 bool GameLayer::onContactBegin(PhysicsContact& contact) {
+    SimpleAudioEngine::getInstance()->playEffect("sounds/sfx_hit.ogg");
     gameOver();
     return true;
 }
@@ -156,6 +157,7 @@ bool GameLayer::onTouchBegan(Touch* touch, Event* pEvent) {
         return false;
     }
 
+	SimpleAudioEngine::getInstance()->playEffect("sounds/sfx_wing.ogg");
     if (gameStatus == GAME_STATUS_READY) {
         gameStatus = GAME_STATUS_START;
         this->removeChild(readyNode);
@@ -188,9 +190,9 @@ void GameLayer::createPipes() {
         pipeBody->addShape(PhysicsShapeBox::create(pipeUp->getContentSize(),PHYSICSSHAPE_MATERIAL_DEFAULT, Vec2(0, PIPE_HEIGHT + PIPE_DISTANCE)));
         pipeBody->addShape(PhysicsShapeBox::create(pipeDown->getContentSize()));
         pipeBody->setDynamic(false);
-//        pipeBody->setCategoryBitmask(1);
-//        pipeBody->setCollisionBitmask(1);
-//        pipeBody->setContactTestBitmask(1);
+        pipeBody->setCategoryBitmask(1);
+        pipeBody->setCollisionBitmask(1);
+        pipeBody->setContactTestBitmask(1);
         pipe->setAnchorPoint(Vec2::ANCHOR_BOTTOM_LEFT);
         pipe->setPosition(Vec2(WIN_SIZE.width + i*PIPE_INTERVAL + WAIT_DISTANCE, rand()%(int)(2*PIPE_HEIGHT + PIPE_DISTANCE - WIN_SIZE.height)));
         pipe->setTag(TAG_NEW_PIPE);
@@ -221,6 +223,7 @@ void GameLayer::movePipesAndLand(float dt) {
             pipe->setTag(TAG_PASS_PIPE);
             score++;
             scoreLabel->setString(String::createWithFormat("score:%d", score)->getCString());
+            SimpleAudioEngine::getInstance()->playEffect("sounds/sfx_point.ogg");
 
             Sprite* up = (Sprite*)pipe->getChildByTag(TAG_UP_PIPE);
             up->setDisplayFrame(AtlasLoader::getInstance()->getSpriteFrameByName("pipe2_up"));
@@ -251,6 +254,7 @@ void GameLayer::gameOver() {
 
     this->getEventDispatcher()->removeAllEventListeners();
 
+    SimpleAudioEngine::getInstance()->playEffect("sounds/sfx_die.ogg");
     showOverPop();
 }
 
@@ -285,7 +289,7 @@ int GameLayer::sortScore(int cur) {
     int second = UserDefault::getInstance()->getIntegerForKey(KEY_SECOND_SCORE);
     int third = UserDefault::getInstance()->getIntegerForKey(KEY_THIRD_SCORE);
 
-    CCLOG("%d----%d----%d---%d", first, second, third, cur);
+//    CCLOG("%d----%d----%d---%d", first, second, third, cur);
 
     if (cur == first) {
         return 0;
@@ -323,7 +327,8 @@ int GameLayer::sortScore(int cur) {
 }
 
 void GameLayer::menuCallBack(Node* pSender) {
-    this->removeAllChildrenWithCleanup(true);
+    //    this->removeAllChildrenWithCleanup(true);
+	SimpleAudioEngine::getInstance()->playEffect("sounds/sfx_swooshing.ogg");
 
     if (pSender->getTag() == 1001) {
         backToHome();
@@ -339,7 +344,8 @@ void GameLayer::restart() {
 }
 
 void GameLayer::backToHome() {
+    this->removeChild(bird);
     auto home = HomeScene::createScene();
-    auto homeTrans = TransitionFadeBL::create(0.7, home);
+    auto homeTrans = TransitionFadeTR::create(0.7, home);
     Director::getInstance()->replaceScene(homeTrans);
 }
