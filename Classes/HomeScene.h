@@ -22,6 +22,7 @@ public:
     CREATE_FUNC(HomeScene);
 
     void menuCallBack(Ref* pSender);
+    void onKeyReleased(EventKeyboard::KeyCode code, Event* pEvent);
 };
 
 #endif /* defined(__BirdTest__HomeScene__) */

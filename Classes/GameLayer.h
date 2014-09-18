@@ -21,6 +21,9 @@ const int TAG_DOWN_PIPE = 2002;
 const int TAG_PASS_PIPE = 2003;
 const int TAG_NEW_PIPE = 2004;
 
+const int TAG_RESTART_BUTTON = 1001;
+const int TAG_BACK_HOME_BUTTON = 1002;
+
 const int PIPE_HEIGHT = 320;
 const int PIPE_WIDTH = 52;
 const int PIPE_DISTANCE = 100;

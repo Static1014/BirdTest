@@ -65,7 +65,7 @@ bool GameLayer::init() {
     body->setCollisionBitmask(1);
     body->setContactTestBitmask(1);
     bird->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
-    bird->setPosition(Vec2(WIN_SIZE.width/2, WIN_SIZE.height/2));
+    bird->setPosition(WIN_CENTER);
     bird->setPhysicsBody(body);
     bird->idle();
     bird->setRotation(0);
@@ -75,20 +75,16 @@ bool GameLayer::init() {
     scoreLabel->setPosition(Vec2(10, WIN_SIZE.height-5));
     this->addChild(scoreLabel, 3);
 
-//    auto restartItem = MenuItemFont::create("restart", CC_CALLBACK_0(GameLayer::restart, this));
-//    restartItem->setAnchorPoint(Vec2::ANCHOR_TOP_RIGHT);
-//    restartItem->setFontSizeObj(24);
-
     auto pauseNormalSprite = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName("button_pause"));
     auto pauseSelectedSprite = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName("button_pause"));
     pauseSelectedSprite->setScale(0.8);
     pauseItem = MenuItemSprite::create(pauseNormalSprite, pauseSelectedSprite, CC_CALLBACK_0(GameLayer::pauseOrResumeGame, this));
-    pauseItem->setTag(211);
     pauseItem->setPosition(Vec2(WIN_SIZE.width-25, WIN_SIZE.height-25));
     auto menu = Menu::create(pauseItem, NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 3);
     pauseItem->setEnabled(false);
+    pauseItem->setScale(0);
 
 
     land1 = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName("land"));
@@ -168,6 +164,7 @@ bool GameLayer::onTouchBegan(Touch* touch, Event* pEvent) {
         moveSchedule = schedule_selector(GameLayer::movePipesAndLand);
         this->schedule(moveSchedule, 0.01f);
 
+        pauseItem->setScale(1);
         pauseItem->setEnabled(true);
     } else {
         bird->getPhysicsBody()->setVelocity(Vect(0,260));
@@ -247,6 +244,8 @@ void GameLayer::movePipesAndLand(float dt) {
 }
 
 void GameLayer::gameOver() {
+    pauseItem->setScale(0);
+
     gameStatus = GAME_STATUS_OVER;
     this->unscheduleAllSelectors();
     bird->die();
@@ -274,8 +273,8 @@ void GameLayer::showOverPop() {
     auto overPop = PopLayer::create();
     overPop->setBackground("score_panel");
     overPop->setCallBackFunc(this, callfuncN_selector(GameLayer::menuCallBack));
-    overPop->addButton("button_menu", "", "", 1001);
-    overPop->addButton("button_ok", "", "", 1002);
+    overPop->addButton("button_menu", "", "", TAG_BACK_HOME_BUTTON);
+    overPop->addButton("button_ok", "", "", TAG_RESTART_BUTTON);
 
     overPop->addCustomNode(sortSprite, Vec2(55, 60));
     overPop->addCustomNode(currentScoreLabel, Vec2(210, 80));
@@ -330,9 +329,9 @@ void GameLayer::menuCallBack(Node* pSender) {
     //    this->removeAllChildrenWithCleanup(true);
 	SimpleAudioEngine::getInstance()->playEffect("sounds/sfx_swooshing.ogg");
 
-    if (pSender->getTag() == 1001) {
+    if (pSender->getTag() == TAG_BACK_HOME_BUTTON) {
         backToHome();
-    } else {
+    } else if (pSender->getTag() == TAG_RESTART_BUTTON) {
         restart();
     }
 }

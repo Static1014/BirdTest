@@ -28,5 +28,45 @@ package org.cocos2dx.cpp;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 
+import android.app.Dialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.util.Log;
+import android.view.KeyEvent;
+
 public class AppActivity extends Cocos2dxActivity {
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		Log.e("", "11111111111111");
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			Builder builder = new Builder(this);
+			builder.setCancelable(false);
+			builder.setTitle("警告");
+			builder.setMessage("确定要退出游戏吗？");
+			builder.setPositiveButton("是",
+					new OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialog,
+								int which) {
+							finish();
+						}
+					});
+			builder.setNegativeButton("否",
+					new OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialog,
+								int which) {
+							dialog.dismiss();
+						}
+					});
+
+			Dialog dialog = builder.create();
+			dialog.show();
+			return false;
+		} else {
+			return super.onKeyDown(keyCode, event);
+		}
+	}
 }

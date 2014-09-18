@@ -57,7 +57,7 @@ void PopLayer::addButton(string normalImage, string selectImage, string title, i
     auto normalSprite = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(normalImage));
 
     auto selectedSprite = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(("" == selectImage)?normalImage:selectImage));
-    selectedSprite->setScale(("" == selectImage)?0.9:1.0);
+    selectedSprite->setScale(("" == selectImage)?0.92:1.0);
 
     auto item = MenuItemSprite::create(normalSprite, selectedSprite, CC_CALLBACK_1(PopLayer::menuCallback, this));
     item->setTag(tag);
