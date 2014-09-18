@@ -10,6 +10,16 @@
 #define __BirdTest__HomeScene__
 
 #include "Constance.h"
+#include "BackgroundLayer.h"
+#include "BirdSprite.h"
+#include "GameScene.h"
+
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+#include "platform/android/jni/JniHelper.h"
+#include <jni.h>
+#endif
+
+#define CLASS_NAME "org/cocos2dx/lib/Cocos2dxActivity"
 
 class HomeScene : public Layer {
 public:

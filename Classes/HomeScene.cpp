@@ -7,9 +7,6 @@
 //
 
 #include "HomeScene.h"
-#include "BackgroundLayer.h"
-#include "BirdSprite.h"
-#include "GameScene.h"
 
 enum {
     TagStartBtn,
@@ -57,17 +54,28 @@ bool HomeScene::init() {
     copyRight->setPosition(Vec2(WIN_SIZE.width/2, copyRight->getContentSize().height));
     this->addChild(copyRight);
 
-//    auto keyboardListener = EventListenerKeyboard::create();
-//    keyboardListener->onKeyReleased = CC_CALLBACK_2(HomeScene::onKeyReleased, this);
-//    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(keyboardListener, this);
+    auto keyboardListener = EventListenerKeyboard::create();
+    keyboardListener->onKeyReleased = CC_CALLBACK_2(HomeScene::onKeyReleased, this);
+    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(keyboardListener, this);
 
-    this->setKeypadEnabled(true);
+//    this->setKeypadEnabled(true);
 
     return true;
 }
 
 void HomeScene::onKeyReleased(EventKeyboard::KeyCode code, Event* pEvent) {
     CCLOG("--------%d", code);
+    if (code == EventKeyboard::KeyCode::KEY_BACK) {
+        #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+        JniMethodInfo minfo;
+        if (JniHelper::getStaticMethodInfo(minfo,
+                                           CLASS_NAME,
+                                           "showExitDialog",
+                                           "()V")) {
+            minfo.env->CallStaticObjectMethod(minfo.classID, minfo.methodID);
+        }
+        #endif
+    }
 }
 
 void HomeScene::menuCallBack(Ref* pSender) {
