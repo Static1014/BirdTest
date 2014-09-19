@@ -28,4 +28,5 @@ using namespace std;
 #define min(X, Y) ((X)<(Y) ? (X) : (Y))
 #define max(X, Y) ((X)>(Y) ? (X) : (Y))
 
+#define MOVE_INTERVAL ((CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)?1.5f:2.5f)
 #endif

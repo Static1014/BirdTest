@@ -58,13 +58,10 @@ bool HomeScene::init() {
     keyboardListener->onKeyReleased = CC_CALLBACK_2(HomeScene::onKeyReleased, this);
     this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(keyboardListener, this);
 
-//    this->setKeypadEnabled(true);
-
     return true;
 }
 
 void HomeScene::onKeyReleased(EventKeyboard::KeyCode code, Event* pEvent) {
-    CCLOG("--------%d", code);
     if (code == EventKeyboard::KeyCode::KEY_BACK) {
         #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
         JniMethodInfo minfo;

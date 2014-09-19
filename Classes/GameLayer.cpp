@@ -158,6 +158,7 @@ bool GameLayer::onTouchBegan(Touch* touch, Event* pEvent) {
         gameStatus = GAME_STATUS_START;
         this->removeChild(readyNode);
         this->addChild(bird, 2);
+        bird->setPosition(WIN_CENTER);
         bird->fly();
         createPipes();
 
@@ -206,15 +207,15 @@ void GameLayer::movePipesAndLand(float dt) {
     float speed = bird->getPhysicsBody()->getVelocity().y;
     bird->setRotation(min(max(-60, (speed*0.2 + 60)), 30));
 
-    land1->setPositionX(land1->getPositionX()-2.0f);
+    land1->setPositionX(land1->getPositionX()-MOVE_INTERVAL);
     land2->setPositionX(land1->getPositionX()+land1->getContentSize().width-2.0f);
-    if (land2->getPositionX() == 0) {
+    if (land2->getPositionX() <= 0) {
         land1->setPositionX(0);
         land2->setPositionX(land1->getPositionX()+land1->getContentSize().width-2.0f);
     }
 
     for (auto pipe : pipes) {
-        pipe->setPositionX(pipe->getPositionX() - 2.0f);
+        pipe->setPositionX(pipe->getPositionX() - MOVE_INTERVAL);
 
         if (pipe->getTag() == TAG_NEW_PIPE && ( pipe->getPositionX()+PIPE_WIDTH/2 <= bird->getPositionX()-BIRD_RADIUS)) {
             pipe->setTag(TAG_PASS_PIPE);

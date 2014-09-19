@@ -40,9 +40,9 @@ float BackgroundLayer::getLandHeight() {
 }
 
 void BackgroundLayer::scrollLand(float dt) {
-    land1->setPositionX(land1->getPositionX()-2.0f);
+    land1->setPositionX(land1->getPositionX()-MOVE_INTERVAL);
     land2->setPositionX(land1->getPositionX()+land1->getContentSize().width-2.0f);
-    if (land2->getPositionX() == 0) {
+    if (land2->getPositionX() <= 0) {
         land1->setPositionX(0);
         land2->setPositionX(land1->getPositionX()+land1->getContentSize().width-2.0f);
     }

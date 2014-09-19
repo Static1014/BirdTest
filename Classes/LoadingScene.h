@@ -14,9 +14,9 @@ public:
 
     CREATE_FUNC(LoadingScene);
 
-    void onEnter() override;
-
     void loadingCallback(Texture2D *texture);
+
+    void goToHome(float dt);
 };
 
 #endif // __LOADING_SCENE_H__
