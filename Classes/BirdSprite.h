@@ -24,7 +24,7 @@ typedef enum {
 } BirdType;
 
 const int Tag_shared_bird = 10001;
-const int BIRD_RADIUS = 15;
+const int BIRD_RADIUS = 13;
 
 class BirdSprite : public Sprite {
 public:

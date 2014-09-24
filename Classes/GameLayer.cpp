@@ -8,8 +8,21 @@
 
 #include "GameLayer.h"
 
-GameLayer::GameLayer(){}
+GameLayer* GameLayer::sharedGameLayer = NULL;
+GameStatus GameLayer::gameStatus = GAME_STATUS_READY;
+
+GameLayer::GameLayer(){
+    sharedGameLayer = this;
+}
 GameLayer::~GameLayer(){}
+
+GameLayer * GameLayer::getSharedGameLayer(){
+    if (sharedGameLayer == NULL) {
+        sharedGameLayer = new GameLayer();
+        sharedGameLayer->init();
+    }
+    return sharedGameLayer;
+}
 
 bool GameLayer::init() {
     if (!Layer::init()){
@@ -129,16 +142,37 @@ void GameLayer::pauseOrResumeGame() {
         bird->getPhysicsBody()->setVelocity(Vec2(0, 0));
         bird->getPhysicsBody()->setEnable(false);
         bird->stopAllActions();
+
+        // show ads
+        #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+        JniMethodInfo minfo;
+
+        if (JniHelper::getStaticMethodInfo(minfo,
+                                           CLASS_NAME,
+                                           "isConnectionAvaliable",
+                                           "()Z")) {
+            if (minfo.env->CallStaticBooleanMethod(minfo.classID, minfo.methodID)) {
+                pauseItem->setEnabled(false);
+                JniMethodInfo minfoi;
+                if (JniHelper::getStaticMethodInfo(minfoi,
+                                                   CLASS_NAME,
+                                                   "showInterAd",
+                                                   "()V")) {
+                    minfoi.env->CallStaticVoidMethod(minfoi.classID, minfoi.methodID);
+                    minfoi.env->DeleteLocalRef(minfoi.classID);
+                }
+            } else {
+                CCLOG("Network is unavailable!");
+            }
+            minfo.env->DeleteLocalRef(minfo.classID);
+        }
+        #endif
     } else {
-        gameStatus = GAME_STATUS_START;
         btnImage = "button_pause";
 
-        this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(contactListener, this);
-        //    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
-        this->schedule(moveSchedule, 0.01f);
-        bird->resume();
-        bird->getPhysicsBody()->setEnable(true);
-        bird->getPhysicsBody()->setVelocity(speed);
+        timeNum = 3;
+        showResumeTimer();
+        pauseItem->setEnabled(false);
     }
     
     auto pauseNormalSprite = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(btnImage));
@@ -147,6 +181,81 @@ void GameLayer::pauseOrResumeGame() {
     pauseItem->setNormalImage(pauseNormalSprite);
     pauseItem->setSelectedImage(pauseSelectedSprite);
 }
+
+void GameLayer::resumeGame() {
+    gameStatus = GAME_STATUS_START;
+
+    contactListener = EventListenerPhysicsContact::create();
+    contactListener->onContactBegin = CC_CALLBACK_1(GameLayer::onContactBegin, this);
+    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(contactListener, this);
+    //    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
+    this->schedule(moveSchedule, 0.01f);
+    bird->resume();
+    bird->getPhysicsBody()->setEnable(true);
+    bird->getPhysicsBody()->setVelocity(speed);
+
+    pauseItem->setEnabled(true);
+}
+
+void GameLayer::showResumeTimer() {
+//    string name = String::createWithFormat("number_socre_0%d", timeNum)->getCString();
+    string name;
+    switch(timeNum) {
+        case 3:
+            name = "number_score_03";
+            break;
+
+        case 2:
+            name = "number_score_02";
+            break;
+
+        case 1:
+            name = "number_score_01";
+            break;
+
+        default:
+            name = "number_score_01";
+            break;
+    }
+    if (timeNum == 3) {
+        timeSprite3 = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(name));
+        timeSprite3->setPosition(WIN_CENTER);
+        timeSprite3->setOpacity(80);
+        this->addChild(timeSprite3, 4);
+    } else {
+        timeSprite3->setSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(name));
+    }
+    timeSprite3->setScale(0);
+
+    auto aScale = ScaleTo::create(0.8, 2.4);
+    auto removeCall = CallFuncN::create(CC_CALLBACK_1(GameLayer::changeTimeSprite, this));
+    auto resumeCall = CallFunc::create(CC_CALLBACK_0(GameLayer::resumeGame, this));
+    timeSprite3->runAction(Sequence::create(aScale, removeCall, (timeNum == 1)? resumeCall:NULL, NULL));
+}
+
+void GameLayer::changeTimeSprite(Node* pNode) {
+    if (timeNum == 1) {
+        pNode->removeFromParentAndCleanup(true);
+    } else {
+        timeNum--;
+        showResumeTimer();
+    }
+}
+
+// Java->cpp
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+extern "C" {
+    void Java_org_cocos2dx_lib_Cocos2dxActivity_resumeGame(JNIEnv * jenv,jobject jobject, jint succ){
+        if (succ == 1) {
+            //  关闭广告，直接进行开始倒计时
+            GameLayer::getSharedGameLayer()->pauseOrResumeGame();
+        } else {
+            //  广告显示失败，让pauseItem可点
+            GameLayer::getSharedGameLayer()->pauseItem->setEnabled(true);
+        }
+    }
+}
+#endif
 
 bool GameLayer::onTouchBegan(Touch* touch, Event* pEvent) {
     if (gameStatus == GAME_STATUS_OVER || gameStatus == GAME_STATUS_PAUSE) {

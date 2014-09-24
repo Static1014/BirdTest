@@ -10,8 +10,6 @@
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
 	<string>Icon-57.png</string>
-	<key>UILaunchImageFile</key>
-	<string>image/splash.png</string>
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>Icon-29</string>
@@ -25,6 +23,8 @@
 		<string>Icon-72.png</string>
 		<string>Icon-144.png</string>
 	</array>
+	<key>UILaunchImageFile</key>
+	<string>image/splash.png</string>
 	<key>CFBundleIconFiles~ipad</key>
 	<array>
 		<string>Icon-29</string>

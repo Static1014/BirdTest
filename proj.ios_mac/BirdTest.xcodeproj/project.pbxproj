@@ -60,6 +60,9 @@
 		B39A88AD19C154570038F412 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B39A88AB19C154570038F412 /* GameScene.cpp */; };
 		B39A88BD19C175C70038F412 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B39A88BB19C175C70038F412 /* GameLayer.cpp */; };
 		B39A88BF19C28B080038F412 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = B39A88BE19C28B070038F412 /* fonts */; };
+		B3CC1A7319CFCD0300D9A331 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CC1A7219CFCD0300D9A331 /* MessageUI.framework */; };
+		B3CC1A7519CFCD0E00D9A331 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CC1A7419CFCD0D00D9A331 /* SystemConfiguration.framework */; };
+		B3CC1A7819CFD47800D9A331 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CC1A4019CFC14C00D9A331 /* iAd.framework */; };
 		B3DFA01419C7E7E0005BEED1 /* PopLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3DFA01219C7E7E0005BEED1 /* PopLayer.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -202,6 +205,11 @@
 		B39A88BB19C175C70038F412 /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameLayer.cpp; path = ../Classes/GameLayer.cpp; sourceTree = "<group>"; };
 		B39A88BC19C175C70038F412 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = ../Classes/GameLayer.h; sourceTree = "<group>"; };
 		B39A88BE19C28B070038F412 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		B3CC1A4019CFC14C00D9A331 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/iAd.framework; sourceTree = DEVELOPER_DIR; };
+		B3CC1A7019CFCCFB00D9A331 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		B3CC1A7219CFCD0300D9A331 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		B3CC1A7419CFCD0D00D9A331 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		B3CC1A7619CFCD1700D9A331 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		B3DFA01219C7E7E0005BEED1 /* PopLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PopLayer.cpp; path = ../Classes/PopLayer.cpp; sourceTree = "<group>"; };
 		B3DFA01319C7E7E0005BEED1 /* PopLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopLayer.h; path = ../Classes/PopLayer.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -218,6 +226,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3CC1A7819CFD47800D9A331 /* iAd.framework in Frameworks */,
+				B3CC1A7519CFCD0E00D9A331 /* SystemConfiguration.framework in Frameworks */,
+				B3CC1A7319CFCD0300D9A331 /* MessageUI.framework in Frameworks */,
 				B3821C7D19C0004800A9BEE0 /* libbox2d iOS.a in Frameworks */,
 				B3821C7E19C0004800A9BEE0 /* libchipmunk iOS.a in Frameworks */,
 				B3821C7F19C0004800A9BEE0 /* libcocos2dx iOS.a in Frameworks */,
@@ -325,6 +336,11 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3CC1A7619CFCD1700D9A331 /* CoreGraphics.framework */,
+				B3CC1A7419CFCD0D00D9A331 /* SystemConfiguration.framework */,
+				B3CC1A7219CFCD0300D9A331 /* MessageUI.framework */,
+				B3CC1A7019CFCCFB00D9A331 /* AudioToolbox.framework */,
+				B3CC1A4019CFC14C00D9A331 /* iAd.framework */,
 				D6B0611A1803AB670077942B /* CoreMotion.framework */,
 				503AE11A17EB9C5A00D1A890 /* IOKit.framework */,
 				503AE11117EB99EE00D1A890 /* libcurl.dylib */,
@@ -640,6 +656,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -660,7 +677,7 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = /Users/mobile6/Documents/Git_projects/BirdTest/Classes;
 				PRODUCT_NAME = "BirdTest iOS";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -672,6 +689,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -690,7 +708,7 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = /Users/mobile6/Documents/Git_projects/BirdTest/Classes;
 				PRODUCT_NAME = "BirdTest iOS";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;

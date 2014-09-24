@@ -29,4 +29,6 @@ using namespace std;
 #define max(X, Y) ((X)>(Y) ? (X) : (Y))
 
 #define MOVE_INTERVAL ((CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)?1.5f:2.5f)
+
+#define VOICE_VALUE 0.6
 #endif

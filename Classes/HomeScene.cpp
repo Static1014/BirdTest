@@ -79,6 +79,7 @@ void HomeScene::menuCallBack(Ref* pSender) {
     Node* btn = (Node*)pSender;
     if (btn->getTag() == TagStartBtn) {
         SimpleAudioEngine::getInstance()->playEffect("sounds/sfx_swooshing.ogg");
+        SimpleAudioEngine::getInstance()->setEffectsVolume(VOICE_VALUE);
         this->removeChildByTag(Tag_shared_bird);
         auto gameScene = GameScene::create();
         auto gameSceneTrans = TransitionFadeTR::create(0.6, gameScene);

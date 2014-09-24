@@ -45,6 +45,10 @@ class GameLayer : public Layer {
 public:
     GameLayer();
     ~GameLayer();
+
+    static GameLayer* sharedGameLayer;
+    static GameStatus gameStatus;
+    static GameLayer* getSharedGameLayer();
     
     virtual bool init();
 
@@ -57,7 +61,11 @@ public:
     bool onTouchBegan(Touch* touch, Event* pEvent);
     void menuCallBack(Node* pSender);
 
+    MenuItemSprite* pauseItem;
     void pauseOrResumeGame();
+    void showResumeTimer();
+    void resumeGame();
+    void changeTimeSprite(Node* pNode);
 
 private:
     PhysicsWorld* world;
@@ -69,9 +77,7 @@ private:
     Node* readyNode;
 
     int score;
-    GameStatus gameStatus;
 
-    MenuItemSprite* pauseItem;
     EventListenerPhysicsContact* contactListener;
     EventListenerTouchOneByOne* touchListener;
     SEL_SCHEDULE moveSchedule;
@@ -83,7 +89,10 @@ private:
     void gameOver();
     void showOverPop();
 
-    int sortScore(int score);
+    int sortScore(int score);  // 判断当前分数在已有前三名中的位置，并返回
+
+    Sprite * timeSprite3;
+    int timeNum;
 };
 
 #endif /* defined(__BirdTest__GameLayer__) */

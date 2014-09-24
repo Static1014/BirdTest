@@ -71,6 +71,10 @@ static AppDelegate s_sharedApplication;
 
     [window makeKeyAndVisible];
 
+//    ADBannerView* adBanner = [[ADBannerView alloc]initWithFrame:CGRectZero];
+//    adBanner.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
+//    [eaglView addSubview:adBanner];
+
     [[UIApplication sharedApplication] setStatusBarHidden:true];
 
     // IMPORTANT: Setting the GLView should be done after creating the RootViewController
