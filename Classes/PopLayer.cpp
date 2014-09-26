@@ -15,13 +15,22 @@ bool PopLayer::init() {
     if (!Layer::init()) {
         return false;
     }
+
+    auto bg = LayerColor::create(Color4B(0, 0, 0, 0));
+    bg->setOpacity(80);
+    bg->setContentSize(WIN_SIZE);
+    bg->setPosition(Vec2::ZERO);
+    this->addChild(bg);
+    
+    setCallBack = false;
+
     return true;
 }
 
 void PopLayer::menuCallback(Ref* pSender) {
     Node* btn = static_cast<Node*>(pSender);
 
-    if (mCallFuncN && mCallBackListener) {
+    if (setCallBack && mCallFuncN && mCallBackListener) {
         (mCallBackListener->*mCallFuncN)(btn);
     }
     this->removeFromParentAndCleanup(true);
@@ -49,6 +58,7 @@ void PopLayer::addCustomNode(Node* node, Vec2 location) {
 }
 
 void PopLayer::setCallBackFunc(Ref* target, SEL_CallFuncN callFunc) {
+    setCallBack = true;
     mCallBackListener = target;
     mCallFuncN = callFunc;
 }

@@ -37,10 +37,6 @@ typedef enum {
     GAME_STATUS_PAUSE
 } GameStatus;
 
-#define KEY_FIRST_SCORE "first_score"
-#define KEY_SECOND_SCORE "second_score"
-#define KEY_THIRD_SCORE "third_score"
-
 class GameLayer : public Layer {
 public:
     GameLayer();

@@ -28,7 +28,12 @@ using namespace std;
 #define min(X, Y) ((X)<(Y) ? (X) : (Y))
 #define max(X, Y) ((X)>(Y) ? (X) : (Y))
 
-#define MOVE_INTERVAL ((CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)?1.5f:2.5f)
+#define MOVE_INTERVAL ((CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)?1.5f:2.0f)
 
-#define VOICE_VALUE 0.6
+#define VOICE_VALUE 0.8
+
+#define KEY_FIRST_SCORE "first_score"
+#define KEY_SECOND_SCORE "second_score"
+#define KEY_THIRD_SCORE "third_score"
+
 #endif

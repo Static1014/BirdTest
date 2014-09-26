@@ -33,9 +33,10 @@ public:
 
     void onEnter();
 
-private:
+public:
     Sprite* mBackground;
     Menu* mMenu;
+    bool setCallBack;
 
     Ref* mCallBackListener;
     SEL_CallFuncN mCallFuncN;

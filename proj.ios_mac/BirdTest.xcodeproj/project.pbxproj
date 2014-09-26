@@ -49,7 +49,10 @@
 		7DA5A4D219C0993A00F73971 /* AtlasLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5A4CF19C0993A00F73971 /* AtlasLoader.cpp */; };
 		B3474F3319CA8C0F00160C5B /* image in Resources */ = {isa = PBXBuildFile; fileRef = B3474F3219CA8C0D00160C5B /* image */; };
 		B3474F3519CA8C6000160C5B /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = B3474F3419CA8C6000160C5B /* sounds */; };
-		B3821C7D19C0004800A9BEE0 /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3821C7919BFFC8300A9BEE0 /* libbox2d iOS.a */; };
+		B3596D7219D3C35F00018642 /* PopListLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3596D7019D3C35F00018642 /* PopListLayer.cpp */; };
+		B381B04619D3E05900BBEA3B /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B381B04519D3E05900BBEA3B /* GameController.framework */; };
+		B381B04819D3E5CA00BBEA3B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B381B04719D3E5CA00BBEA3B /* CoreMotion.framework */; };
+		B381B04919D3E75F00BBEA3B /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3821C7919BFFC8300A9BEE0 /* libbox2d iOS.a */; };
 		B3821C7E19C0004800A9BEE0 /* libchipmunk iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3821C7719BFFC8300A9BEE0 /* libchipmunk iOS.a */; };
 		B3821C7F19C0004800A9BEE0 /* libcocos2dx iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3821C7319BFFC8300A9BEE0 /* libcocos2dx iOS.a */; };
 		B3821C8019C0004800A9BEE0 /* libcocos2dx-extensions iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3821C7519BFFC8300A9BEE0 /* libcocos2dx-extensions iOS.a */; };
@@ -62,7 +65,6 @@
 		B39A88BF19C28B080038F412 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = B39A88BE19C28B070038F412 /* fonts */; };
 		B3CC1A7319CFCD0300D9A331 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CC1A7219CFCD0300D9A331 /* MessageUI.framework */; };
 		B3CC1A7519CFCD0E00D9A331 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CC1A7419CFCD0D00D9A331 /* SystemConfiguration.framework */; };
-		B3CC1A7819CFD47800D9A331 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CC1A4019CFC14C00D9A331 /* iAd.framework */; };
 		B3DFA01419C7E7E0005BEED1 /* PopLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3DFA01219C7E7E0005BEED1 /* PopLayer.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -70,7 +72,6 @@
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
-		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +194,10 @@
 		7DA5A4D119C0993A00F73971 /* Constance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constance.h; path = ../Classes/Constance.h; sourceTree = "<group>"; };
 		B3474F3219CA8C0D00160C5B /* image */ = {isa = PBXFileReference; lastKnownFileType = folder; path = image; sourceTree = "<group>"; };
 		B3474F3419CA8C6000160C5B /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sounds; sourceTree = "<group>"; };
+		B3596D7019D3C35F00018642 /* PopListLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PopListLayer.cpp; path = ../Classes/PopListLayer.cpp; sourceTree = "<group>"; };
+		B3596D7119D3C35F00018642 /* PopListLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopListLayer.h; path = ../Classes/PopListLayer.h; sourceTree = "<group>"; };
+		B381B04519D3E05900BBEA3B /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
+		B381B04719D3E5CA00BBEA3B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		B3821C5519BFFAD900A9BEE0 /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		B3821CA319C0218200A9BEE0 /* HomeScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HomeScene.cpp; path = ../Classes/HomeScene.cpp; sourceTree = "<group>"; };
 		B3821CA419C0218200A9BEE0 /* HomeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeScene.h; path = ../Classes/HomeScene.h; sourceTree = "<group>"; };
@@ -226,20 +231,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3CC1A7819CFD47800D9A331 /* iAd.framework in Frameworks */,
+				B381B04919D3E75F00BBEA3B /* libbox2d iOS.a in Frameworks */,
+				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
+				B381B04819D3E5CA00BBEA3B /* CoreMotion.framework in Frameworks */,
+				B381B04619D3E05900BBEA3B /* GameController.framework in Frameworks */,
 				B3CC1A7519CFCD0E00D9A331 /* SystemConfiguration.framework in Frameworks */,
 				B3CC1A7319CFCD0300D9A331 /* MessageUI.framework in Frameworks */,
-				B3821C7D19C0004800A9BEE0 /* libbox2d iOS.a in Frameworks */,
 				B3821C7E19C0004800A9BEE0 /* libchipmunk iOS.a in Frameworks */,
 				B3821C7F19C0004800A9BEE0 /* libcocos2dx iOS.a in Frameworks */,
 				B3821C8019C0004800A9BEE0 /* libcocos2dx-extensions iOS.a in Frameworks */,
 				B3821C8119C0004800A9BEE0 /* libCocosDenshion iOS.a in Frameworks */,
-				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */,
-				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
 				BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */,
 				D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */,
 				D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */,
@@ -305,6 +310,8 @@
 				B39A88BC19C175C70038F412 /* GameLayer.h */,
 				B3DFA01219C7E7E0005BEED1 /* PopLayer.cpp */,
 				B3DFA01319C7E7E0005BEED1 /* PopLayer.h */,
+				B3596D7019D3C35F00018642 /* PopListLayer.cpp */,
+				B3596D7119D3C35F00018642 /* PopListLayer.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -336,6 +343,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B381B04719D3E5CA00BBEA3B /* CoreMotion.framework */,
+				B381B04519D3E05900BBEA3B /* GameController.framework */,
 				B3CC1A7619CFCD1700D9A331 /* CoreGraphics.framework */,
 				B3CC1A7419CFCD0D00D9A331 /* SystemConfiguration.framework */,
 				B3CC1A7219CFCD0300D9A331 /* MessageUI.framework */,
@@ -633,6 +642,7 @@
 				B3821CA519C0218200A9BEE0 /* HomeScene.cpp in Sources */,
 				B39A88BD19C175C70038F412 /* GameLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				B3596D7219D3C35F00018642 /* PopListLayer.cpp in Sources */,
 				B3821CAE19C0415300A9BEE0 /* BirdSprite.cpp in Sources */,
 				7DA5A4D219C0993A00F73971 /* AtlasLoader.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* LoadingScene.cpp in Sources */,
@@ -658,6 +668,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -679,6 +690,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = /Users/mobile6/Documents/Git_projects/BirdTest/Classes;
 				PRODUCT_NAME = "BirdTest iOS";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -691,6 +703,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -710,6 +723,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = /Users/mobile6/Documents/Git_projects/BirdTest/Classes;
 				PRODUCT_NAME = "BirdTest iOS";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -798,10 +812,11 @@
 					"$(SRCROOT)/../cocos2d/external",
 					"$(SRCROOT)/../cocos2d/external/chipmunk/include/chipmunk",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -827,10 +842,11 @@
 					"$(SRCROOT)/../cocos2d/external",
 					"$(SRCROOT)/../cocos2d/external/chipmunk/include/chipmunk",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

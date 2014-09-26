@@ -13,6 +13,7 @@
 #include "BackgroundLayer.h"
 #include "BirdSprite.h"
 #include "GameScene.h"
+#include "PopListLayer.h"
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
 #include "platform/android/jni/JniHelper.h"
@@ -33,6 +34,9 @@ public:
 
     void menuCallBack(Ref* pSender);
     void onKeyReleased(EventKeyboard::KeyCode code, Event* pEvent);
+    void removeTouchListener(Node* pNode);
+
+    Menu* menu;
 };
 
 #endif /* defined(__BirdTest__HomeScene__) */
