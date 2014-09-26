@@ -20,6 +20,7 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/GameScene.cpp \
                    ../../Classes/GameLayer.cpp \
                    ../../Classes/PopLayer.cpp \
+                   ../../Classes/PopListLayer.cpp \
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 

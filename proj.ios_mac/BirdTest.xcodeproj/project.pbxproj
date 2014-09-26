@@ -50,6 +50,7 @@
 		B3474F3319CA8C0F00160C5B /* image in Resources */ = {isa = PBXBuildFile; fileRef = B3474F3219CA8C0D00160C5B /* image */; };
 		B3474F3519CA8C6000160C5B /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = B3474F3419CA8C6000160C5B /* sounds */; };
 		B3596D7219D3C35F00018642 /* PopListLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3596D7019D3C35F00018642 /* PopListLayer.cpp */; };
+		B3743FCF19D56521000616EC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B3743FCE19D56521000616EC /* icon.png */; };
 		B381B04619D3E05900BBEA3B /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B381B04519D3E05900BBEA3B /* GameController.framework */; };
 		B381B04819D3E5CA00BBEA3B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B381B04719D3E5CA00BBEA3B /* CoreMotion.framework */; };
 		B381B04919D3E75F00BBEA3B /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3821C7919BFFC8300A9BEE0 /* libbox2d iOS.a */; };
@@ -196,6 +197,7 @@
 		B3474F3419CA8C6000160C5B /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sounds; sourceTree = "<group>"; };
 		B3596D7019D3C35F00018642 /* PopListLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PopListLayer.cpp; path = ../Classes/PopListLayer.cpp; sourceTree = "<group>"; };
 		B3596D7119D3C35F00018642 /* PopListLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopListLayer.h; path = ../Classes/PopListLayer.h; sourceTree = "<group>"; };
+		B3743FCE19D56521000616EC /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		B381B04519D3E05900BBEA3B /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
 		B381B04719D3E5CA00BBEA3B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		B3821C5519BFFAD900A9BEE0 /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 		5087E77117EB970100C73F5D /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				B3743FCE19D56521000616EC /* icon.png */,
 				5087E77217EB970100C73F5D /* Default-568h@2x.png */,
 				5087E77317EB970100C73F5D /* Default.png */,
 				5087E77417EB970100C73F5D /* Default@2x.png */,
@@ -612,6 +615,7 @@
 				B3474F3519CA8C6000160C5B /* sounds in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
+				B3743FCF19D56521000616EC /* icon.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,

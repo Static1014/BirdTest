@@ -10,26 +10,26 @@
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/type_traits \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/cstdint \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/stdint.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/stdint.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/_types.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/machine/_types.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/_wchar_limits.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/android/api-level.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/limits.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/cdefs.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/limits.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/linux/limits.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/machine/internal_types.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/machine/limits.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/syslimits.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm/page.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/stdint.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/_types.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/machine/_types.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/_wchar_limits.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/android/api-level.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/limits.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/cdefs.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/limits.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/linux/limits.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/machine/internal_types.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/machine/limits.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/syslimits.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm/page.h \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/ctype.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/ctype.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/ctype.h \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/xlocale.h \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/string.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/string.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/malloc.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/string.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/malloc.h \
   jni/../../cocos2d/extensions/../extensions/cocos-ext.h \
   jni/../../cocos2d/extensions/../extensions/ExtensionMacros.h \
   jni/../../cocos2d/extensions/../extensions/GUI/CCControlExtension/CCControlExtensions.h \
@@ -37,29 +37,29 @@
   jni/../../cocos2d/cocos/./2d/CCNode.h \
   jni/../../cocos2d/cocos/./base/ccMacros.h \
   jni/../../cocos2d/cocos/./base/CCConsole.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/select.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/time.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/types.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/linux/posix_types.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/linux/stddef.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/linux/compiler.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm/posix_types.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm/types.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/linux/types.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/machine/kernel.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/linux/time.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/signal.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm/signal.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm-generic/signal.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm/sigcontext.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm/siginfo.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm-generic/siginfo.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/select.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/time.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/types.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/linux/posix_types.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/linux/stddef.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/linux/compiler.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm/posix_types.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm/types.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/linux/types.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/machine/kernel.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/sysmacros.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/linux/time.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/signal.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm/signal.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm-generic/signal.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm/sigcontext.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm/siginfo.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm-generic/siginfo.h \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/thread \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/iosfwd \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/wchar.h \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/stdio.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/stdio.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/stdio.h \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/wctype.h \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/__functional_base \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/new \
@@ -77,21 +77,21 @@
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/system_error \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/cerrno \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/errno.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/errno.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/linux/errno.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm/errno.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm-generic/errno.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm-generic/errno-base.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/errno.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/linux/errno.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm/errno.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm-generic/errno.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm-generic/errno-base.h \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/stdexcept \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/chrono \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/ctime \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/time.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/time.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/time.h \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/ratio \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/climits \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/__mutex_base \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/pthread.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sched.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/pthread.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sched.h \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/vector \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/__bit_reference \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/algorithm \
@@ -109,17 +109,17 @@
   jni/../../cocos2d/cocos/./base/ccConfig.h \
   jni/../../cocos2d/cocos/./base/CCPlatformConfig.h \
   jni/../../cocos2d/cocos/./platform/android/CCPlatformDefine.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/android/log.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/android/log.h \
   jni/../../cocos2d/cocos/./platform/android/CCStdC.h \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/math.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/math.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/math.h \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/stdlib.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/stdlib.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/alloca.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/strings.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/memory.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/stdlib.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/alloca.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/strings.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/memory.h \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/cassert \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/assert.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/assert.h \
   jni/../../cocos2d/cocos/./base/CCEventDispatcher.h \
   jni/../../cocos2d/cocos/./base/CCEventListener.h \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/set \
@@ -150,10 +150,10 @@
   jni/../../cocos2d/cocos/./base/CCProtocols.h \
   jni/../../cocos2d/cocos/./base/ccTypes.h \
   jni/../../cocos2d/cocos/./platform/android/CCGL.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h \
   jni/../../cocos2d/cocos/./renderer/CCTexture2D.h \
   jni/../../cocos2d/cocos/./math/CCAffineTransform.h \
   jni/../../cocos2d/cocos/./renderer/ccGLStateCache.h \
@@ -216,13 +216,13 @@
   jni/../../cocos2d/cocos/./base/CCScheduler.h \
   jni/../../cocos2d/cocos/./base/uthash.h \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/inttypes.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/inttypes.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/inttypes.h \
   jni/../../cocos2d/cocos/./base/base64.h \
   jni/../../cocos2d/cocos/./base/ZipUtils.h \
   jni/../../cocos2d/cocos/./platform/android/CCFileUtilsAndroid.h \
   jni/../../cocos2d/cocos/./platform/CCFileUtils.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/jni.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/android/asset_manager.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/jni.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/android/asset_manager.h \
   jni/../../cocos2d/cocos/./base/CCProfiling.h \
   jni/../../cocos2d/cocos/./base/ccUTF8.h \
   jni/../../cocos2d/cocos/./base/CCUserDefault.h \
@@ -277,7 +277,7 @@
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/ios \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/__locale \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/locale.h \
-  /Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/locale.h \
+  /Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/locale.h \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/streambuf \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/locale \
   /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/cstdarg \
@@ -341,6 +341,7 @@
   jni/../../Classes/AtlasLoader.h jni/../../Classes/GameLayer.h \
   jni/../../Classes/BirdSprite.h jni/../../Classes/BackgroundLayer.h \
   jni/../../Classes/PopLayer.h jni/../../Classes/HomeScene.h \
+  jni/../../Classes/PopListLayer.h \
   jni/../../cocos2d/cocos/./platform/android/jni/JniHelper.h
 
 jni/../../Classes/GameScene.h:
@@ -365,45 +366,45 @@ jni/../../cocos2d/cocos/audio/android/../include/Export.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/stdint.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/stdint.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/stdint.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/_types.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/_types.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/machine/_types.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/machine/_types.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/_wchar_limits.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/_wchar_limits.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/android/api-level.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/android/api-level.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/limits.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/limits.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/cdefs.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/cdefs.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/limits.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/limits.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/linux/limits.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/linux/limits.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/machine/internal_types.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/machine/internal_types.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/machine/limits.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/machine/limits.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/syslimits.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/syslimits.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm/page.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm/page.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/ctype.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/ctype.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/ctype.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/xlocale.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/string.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/string.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/string.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/malloc.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/malloc.h:
 
 jni/../../cocos2d/extensions/../extensions/cocos-ext.h:
 
@@ -419,41 +420,41 @@ jni/../../cocos2d/cocos/./base/ccMacros.h:
 
 jni/../../cocos2d/cocos/./base/CCConsole.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/select.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/select.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/time.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/time.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/types.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/types.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/linux/posix_types.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/linux/posix_types.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/linux/stddef.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/linux/stddef.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/linux/compiler.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/linux/compiler.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm/posix_types.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm/posix_types.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm/types.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm/types.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/linux/types.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/linux/types.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/machine/kernel.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/machine/kernel.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/sysmacros.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/linux/time.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/linux/time.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/signal.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/signal.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm/signal.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm/signal.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm-generic/signal.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm-generic/signal.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm/sigcontext.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm/sigcontext.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm/siginfo.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm/siginfo.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm-generic/siginfo.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm-generic/siginfo.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/thread:
 
@@ -463,7 +464,7 @@ jni/../../cocos2d/cocos/./base/CCConsole.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/stdio.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/stdio.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/stdio.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/wctype.h:
 
@@ -499,15 +500,15 @@ jni/../../cocos2d/cocos/./base/CCConsole.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/errno.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/errno.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/errno.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/linux/errno.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/linux/errno.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm/errno.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm/errno.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm-generic/errno.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm-generic/errno.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/asm-generic/errno-base.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/asm-generic/errno-base.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/stdexcept:
 
@@ -517,7 +518,7 @@ jni/../../cocos2d/cocos/./base/CCConsole.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/time.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/time.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/time.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/ratio:
 
@@ -525,9 +526,9 @@ jni/../../cocos2d/cocos/./base/CCConsole.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/__mutex_base:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/pthread.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/pthread.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/sched.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sched.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/vector:
 
@@ -563,27 +564,27 @@ jni/../../cocos2d/cocos/./base/CCPlatformConfig.h:
 
 jni/../../cocos2d/cocos/./platform/android/CCPlatformDefine.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/android/log.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/android/log.h:
 
 jni/../../cocos2d/cocos/./platform/android/CCStdC.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/math.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/math.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/math.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/stdlib.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/stdlib.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/stdlib.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/alloca.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/alloca.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/strings.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/strings.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/memory.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/memory.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/cassert:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/assert.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/assert.h:
 
 jni/../../cocos2d/cocos/./base/CCEventDispatcher.h:
 
@@ -645,13 +646,13 @@ jni/../../cocos2d/cocos/./base/ccTypes.h:
 
 jni/../../cocos2d/cocos/./platform/android/CCGL.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h:
 
 jni/../../cocos2d/cocos/./renderer/CCTexture2D.h:
 
@@ -777,7 +778,7 @@ jni/../../cocos2d/cocos/./base/uthash.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/inttypes.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/inttypes.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/inttypes.h:
 
 jni/../../cocos2d/cocos/./base/base64.h:
 
@@ -787,9 +788,9 @@ jni/../../cocos2d/cocos/./platform/android/CCFileUtilsAndroid.h:
 
 jni/../../cocos2d/cocos/./platform/CCFileUtils.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/jni.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/jni.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/android/asset_manager.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/android/asset_manager.h:
 
 jni/../../cocos2d/cocos/./base/CCProfiling.h:
 
@@ -899,7 +900,7 @@ jni/../../cocos2d/cocos/./deprecated/CCString.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/../../android/support/include/locale.h:
 
-/Users/mobile6/Documents/android-ndk-r10/platforms/android-9/arch-arm/usr/include/locale.h:
+/Users/mobile6/Documents/android-ndk-r10/platforms/android-19/arch-arm/usr/include/locale.h:
 
 /Users/mobile6/Documents/android-ndk-r10/sources/cxx-stl/llvm-libc++/libcxx/include/streambuf:
 
@@ -1032,5 +1033,7 @@ jni/../../Classes/BackgroundLayer.h:
 jni/../../Classes/PopLayer.h:
 
 jni/../../Classes/HomeScene.h:
+
+jni/../../Classes/PopListLayer.h:
 
 jni/../../cocos2d/cocos/./platform/android/jni/JniHelper.h:

@@ -341,6 +341,7 @@
   jni/../../Classes/AtlasLoader.h jni/../../Classes/GameScene.h \
   jni/../../Classes/BirdSprite.h jni/../../Classes/BackgroundLayer.h \
   jni/../../Classes/PopLayer.h jni/../../Classes/HomeScene.h \
+  jni/../../Classes/PopListLayer.h \
   jni/../../cocos2d/cocos/./platform/android/jni/JniHelper.h
 
 jni/../../Classes/GameLayer.h:
@@ -1032,5 +1033,7 @@ jni/../../Classes/BackgroundLayer.h:
 jni/../../Classes/PopLayer.h:
 
 jni/../../Classes/HomeScene.h:
+
+jni/../../Classes/PopListLayer.h:
 
 jni/../../cocos2d/cocos/./platform/android/jni/JniHelper.h:
