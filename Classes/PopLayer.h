@@ -21,7 +21,7 @@ public:
 
     void menuCallback(Ref* pSender);
 
-    void setBackground(string bgImage);
+    void setBackground(string bgImage, float scale = 1.0);
 
     void setTitle(string title = "");
 
@@ -36,6 +36,7 @@ public:
 public:
     Sprite* mBackground;
     Menu* mMenu;
+    float defaultScale;
     bool setCallBack;
 
     Ref* mCallBackListener;

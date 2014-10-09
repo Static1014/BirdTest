@@ -23,6 +23,7 @@ bool PopLayer::init() {
     this->addChild(bg);
     
     setCallBack = false;
+    defaultScale = 1.0;
 
     return true;
 }
@@ -36,8 +37,11 @@ void PopLayer::menuCallback(Ref* pSender) {
     this->removeFromParentAndCleanup(true);
 }
 
-void PopLayer::setBackground(string bgImage) {
+void PopLayer::setBackground(string bgImage, float scale) {
+    defaultScale = scale;
+
     mBackground = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(bgImage));
+    mBackground->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
     mBackground->setPosition(WIN_CENTER);
     this->addChild(mBackground);
     mBackground->setScale(0);
@@ -88,8 +92,8 @@ void PopLayer::onEnter() {
         btn->setPosition(Vec2(btnWidth/2 + i*btnWidth + (i+1)*(bgWidth-btnWidth*btnCount)/(btnCount+1), 10));
     }
 
-    Action* action = Sequence::create(ScaleTo::create(0.20, 1.06),
-                                      ScaleTo::create(0.08, 0.96),
-                                      ScaleTo::create(0.08, 1.00), NULL);
+    Action* action = Sequence::create(ScaleTo::create(0.20, defaultScale + 0.06),
+                                      ScaleTo::create(0.08, defaultScale - 0.05),
+                                      ScaleTo::create(0.08, defaultScale), NULL);
     mBackground->runAction(action);
 }

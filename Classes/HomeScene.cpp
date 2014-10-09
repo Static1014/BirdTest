@@ -105,7 +105,7 @@ void HomeScene::menuCallBack(Ref* pSender) {
         menu->setEnabled(false);
 
         auto sortPop = PopListLayer::create();
-        sortPop->setBackground("bg_night");
+        sortPop->setBackground("bg_night", 0.75);
         sortPop->initTableView();
         sortPop->setCallBackFunc(this, callfuncN_selector(HomeScene::removeTouchListener));
         sortPop->addButton("button_ok", "", "", TagOkBtnInSortPop);

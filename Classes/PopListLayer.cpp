@@ -56,6 +56,7 @@ void PopListLayer::tableCellHighlight(TableView* table, TableViewCell* cell) {
 void PopListLayer::tableCellTouched(TableView* table, TableViewCell* cell) {
 
 }
+
 void PopListLayer::clickItem(ssize_t idx) {
 
 }
@@ -104,14 +105,14 @@ TableViewCell* PopListLayer::tableCellAtIndex(TableView *table, ssize_t idx) {
         auto sortSprite = Sprite::createWithSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(spriteName));
         sortSprite->setPosition(Vec2(55, 60));
         sortSprite->setTag(TagItemSortSprite);
-        cell->addChild(sortSprite);
+        itemBg->addChild(sortSprite);
 
         auto currentScoreLabel = Label::createWithSystemFont(score, "fonts/Marker Felt.ttf", 20);
         currentScoreLabel->setColor(Color3B::RED);
         currentScoreLabel->setAnchorPoint(Vec2::ANCHOR_MIDDLE_RIGHT);
         currentScoreLabel->setPosition(Vec2(210, 80));
         currentScoreLabel->setTag(TagItemScore);
-        cell->addChild(currentScoreLabel);
+        itemBg->addChild(currentScoreLabel);
 
         auto button = ControlButton::create(String::createWithFormat("NO.%ld",idx+1)->getCString(), "fonts/Marker Felt.ttf", 20);
         button->setName(String::createWithFormat("%ld",idx)->getCString());
@@ -121,15 +122,15 @@ TableViewCell* PopListLayer::tableCellAtIndex(TableView *table, ssize_t idx) {
         button->setAnchorPoint(Vec2::ANCHOR_MIDDLE_RIGHT);
         button->setPosition(Vec2(210, 40));
         button->addTargetWithActionForControlEvents(this, cccontrol_selector(PopListLayer::touchUpInsideAction), Control::EventType::TOUCH_UP_INSIDE);
-        cell->addChild(button);
+        itemBg->addChild(button);
     } else {
-        auto sortSprite = (Sprite*)cell->getChildByTag(TagItemSortSprite);
+        auto sortSprite = (Sprite*)cell->getChildByTag(TagItemBg)->getChildByTag(TagItemSortSprite);
         sortSprite->setSpriteFrame(AtlasLoader::getInstance()->getSpriteFrameByName(spriteName));
 
-        auto currentScoreLabel = (Label*)cell->getChildByTag(TagItemScore);
+        auto currentScoreLabel = (Label*)cell->getChildByTag(TagItemBg)->getChildByTag(TagItemScore);
         currentScoreLabel->setString(score);
 
-        auto button = (ControlButton*)cell->getChildByTag(TagItemBtn);
+        auto button = (ControlButton*)cell->getChildByTag(TagItemBg)->getChildByTag(TagItemBtn);
         button->setTitleForState(String::createWithFormat("NO.%ld",idx+1)->getCString(), Control::State::NORMAL);
         button->setTitleForState(String::createWithFormat("NO.%ld",idx+1)->getCString(), Control::State::HIGH_LIGHTED);
         button->setName(String::createWithFormat("%ld",idx)->getCString());
